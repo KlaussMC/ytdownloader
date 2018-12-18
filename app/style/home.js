@@ -15,9 +15,13 @@ export default StyleSheet.create({
 	},
 	header: {
 		width: "100%",
-		height: 45,
+		height: 55, // I increased the height so it looks a bit better and less cramped
 		textAlignVertical: 'center',
-		backgroundColor: RkTheme.current.colors.primary
+		backgroundColor: RkTheme.current.colors.primary,
+		elevation: 10, // "elevates" the element. (adds shadow) ANDROID ONLY
+		// justifyContent: 'center', // Centers the children in elements flexDirection;
+		alignItems: 'center', // Centers the children perpendicular to the elements flexDirection
+		flexDirection: 'row', // Setting the flexDirection to row. Default is perpendicular
 	},
 	header_content: {
 		height: "100%",

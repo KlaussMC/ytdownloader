@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import {Icon} from 'react-native-elements';
@@ -22,12 +14,21 @@ RkTheme.setType('RkTextInput', 'frame', {
 
 export default class App extends Component {
 	render() {
+		// Here i added a wrapping view the contains the app. It has flex 1 so it stretches the whole screen
+		// The header view has a fixed height, so it only takes that away from the total screen
+		// and the main container view can expand to the full height of the screen minus the header
 		return (
-			<View style={styles.container}>
-				<View style={styles.header}><RkButton style={styles.menu_btn}>Menu</RkButton><RkText style={styles.header_content}>Hello World</RkText></View>
-				<Text>Paste URL below</Text>
-				<RkTextInput rkType="frame"/>
-				<RkButton>Download</RkButton>
+			<View style={{flex : 1}}>
+				<View style={styles.header}>
+					<RkButton style={styles.menu_btn}>Menu</RkButton>
+					<RkText style={styles.header_content}>Hello World</RkText>
+				</View>
+				<View style={styles.container}>
+
+					<Text>Paste URL below</Text>
+					<RkTextInput rkType="frame"/>
+					<RkButton>Download</RkButton>
+				</View>
 			</View>
 		);
 	}
