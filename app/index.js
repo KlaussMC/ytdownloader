@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
-import {Icon} from 'react-native-elements';
+// import {Icon} from 'react-native-elements';
+// import { createStackNavigator, createAppContainer } from "react-navigation";
 import {RkTheme, RkButton, RkTextInput, RkText} from "react-native-ui-kitten";
 import styles from './style/home.js';
 
@@ -24,7 +25,6 @@ export default class App extends Component {
 					<RkText style={styles.header_content}>Hello World</RkText>
 				</View>
 				<View style={styles.container}>
-
 					<Text>Paste URL below</Text>
 					<RkTextInput rkType="frame"/>
 					<RkButton>Download</RkButton>
