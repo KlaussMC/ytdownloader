@@ -1,18 +1,19 @@
-import React, {Component} from 'react';
-import {RkTheme} from  "react-native-ui-kitten";
+import React from 'react';
+import {View, Text, Image} from 'react-native';
+import styles from '../style/home.js';
+import {RkButton} from "react-native-ui-kitten";
 
-export default class Header extends React.Component {
-	render() {
-		return (
-			<View style={styles.header}>Hello World</View>
-		);
-	}
+function openMenu() {
+
 }
 
-// const styles = StyleSheet.create({
-// 	header: {
-// 		width: "100%",
-// 		// height: 30,
-// 		background: RkTheme.colors.success
-// 	}
-// });
+export default function Header () {
+	return (
+		<View style={styles.header}>
+			<RkButton onTap={openMenu} style={{padding: 0, width: 'auto'}}>
+				<Image source={require('../icons/menu.png')} style={{width: 20, height: 20}}/>
+			</RkButton>
+			<Text style={styles.header_content}>Hello World</Text>
+		</View>
+	);
+}
